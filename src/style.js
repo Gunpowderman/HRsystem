@@ -37,3 +37,8 @@ export const CardContainer = styled.div`
   height: 600px;
   top: 200px;
 `;
+
+export const Name = styled.p`
+  text-align: center;
+  color: black;
+`;

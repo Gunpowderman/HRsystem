@@ -1,20 +1,25 @@
-class Employee {
-  employee = [];
+import axios from "axios";
+import { makeAutoObservable } from "mobx";
+
+class EmployeeStore {
+  employees = [];
+
   constructor() {
     makeAutoObservable(this);
   }
-  fetchEmployee = async () => {
+
+  fetchEmployees = async () => {
     try {
       const response = await axios.get("http://localhost:8000/employee");
       console.log("adel", response.data);
-      this.Employee = response.data;
+      this.employees = response.data;
     } catch (error) {
       console.error("EmployeeStore -> fetchEmployeeStore -> error", error);
     }
   };
 }
 
-const Employee = new EmployeeStore();
-EmployeeStore.fetchEmployee();
+const employeeStore = new EmployeeStore();
+employeeStore.fetchEmployees();
 
-export default Employee;
+export default employeeStore;
