@@ -6,6 +6,7 @@ class Employee {
   fetchEmployee = async () => {
     try {
       const response = await axios.get("http://localhost:8000/employee");
+      console.log("adel", response.data);
       this.Employee = response.data;
     } catch (error) {
       console.error("EmployeeStore -> fetchEmployeeStore -> error", error);

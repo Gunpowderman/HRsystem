@@ -1,4 +1,4 @@
-export const SearchBar = (props) => {
+const SearchBar = (props) => {
   return (
     <SearchBarStyled
       placeholder="Search for a cloth name"
@@ -6,3 +6,5 @@ export const SearchBar = (props) => {
     />
   );
 };
+
+export default SearchBar;
