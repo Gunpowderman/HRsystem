@@ -1,6 +1,6 @@
 import { useState } from "react";
 import EmployeeItem from "./EmployeeItem";
-import employeeStore from "../../Store/HResource";
+import employeeStore from "../../Store/EmployeeStore";
 import { observer } from "mobx-react";
 
 const EmployeeList = () => {

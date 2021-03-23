@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { Name } from "../../style";
 
-const JobList = () => {
-  const [query, setQuery] = useState("");
+const JobItems = (props) => {
+  const job = props.job;
+  return <Name>{job.jobTitle}</Name>;
 };
+
+export default JobItems;
