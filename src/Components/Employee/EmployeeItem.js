@@ -1,5 +1,4 @@
 import { Name } from "../../style";
-
 import EmployeeDelete from "./DeleteButton";
 
 const EmployeeItems = (props) => {
@@ -7,7 +6,10 @@ const EmployeeItems = (props) => {
 
   return (
     <>
-      <Name>{employee.firstName}</Name>
+      <Name>
+        {employee.firstName} {employee.lastName} {employee.dob} Salary:{" "}
+        {employee.salary}
+      </Name>
       <EmployeeDelete emp={employee.id} />
     </>
   );

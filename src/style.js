@@ -41,3 +41,14 @@ export const Name = styled.p`
   text-align: center;
   color: black;
 `;
+
+export const ModalWrapper = styled.div`
+  background-color: green;
+
+  height: 200px;
+  width: 200px;
+
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+`;

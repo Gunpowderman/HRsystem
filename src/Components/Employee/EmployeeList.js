@@ -12,12 +12,7 @@ const EmployeeList = () => {
     .filter((employee) => employee.firstName.includes(query))
     .map((employee) => <EmployeeItem employee={employee} />);
 
-  return (
-    <>
-      {employeeList}
-      <Modal />
-    </>
-  );
+  return <>{employeeList}</>;
 };
 
 export default observer(EmployeeList);
